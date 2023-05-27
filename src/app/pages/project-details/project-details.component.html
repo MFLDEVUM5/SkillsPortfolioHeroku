@@ -1,0 +1,21 @@
+
+<span class="text-lg font-extrabold font-body block mb-3" [ngClass]="isMobile?'  mt-6':''">{{project.name}}</span>
+<div class="mt-5 flex gap-2" [ngClass]="isMobile?'flex-col mb-3':'h-80'">
+    <div [ngClass]="isMobile?'w-full':'w-[65%]'" class="cursor-pointer rounded-2xl overflow-hidden shadow-lg " >
+        <!-- <img class=" w-full h-full" [src]="project.imageOverview" alt=""> -->
+        <video class=" w-full h-full object-fill"  controls autoplay>
+            <source [src]="project.urlDemo" type="video/mp4">
+          </video>
+          <!-- <iframe src="https://drive.google.com/file/d/1QXapWEOILL1GCpiPHCfk58Jn51Bul9EN/preview" width="640" height="480" allow="autoplay"></iframe> -->
+    </div>
+    <div [ngClass]="isMobile?'w-full':'w-[35%]'" class=" rounded-2xl overflow-hidden px-6 py-3  bg-white shadow-lg flex flex-col items-start">
+        <span class="text-md font-extrabold font-body  mt-3 flex flex-col" >
+            Project's type : 
+            <span class=" ms-2 font-normal"> {{project.domaine}}</span>
+        </span>
+        <span class="text-md font-extrabold font-body block mt-3" >Description</span>
+        <div class="ms-2 break-all">
+            {{project.description}}
+        </div>
+    </div>
+</div>

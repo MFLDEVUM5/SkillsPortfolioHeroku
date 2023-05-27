@@ -1,0 +1,6 @@
+.skillsButton{
+    @apply font-body shadow-lg text-xs rounded-lg py-4 px-5  font-bold mb-8  hover:bg-primary hover:text-white
+}
+.sideBarItem{
+    @apply font-body border-b-primary2 border-b-4 ;
+}

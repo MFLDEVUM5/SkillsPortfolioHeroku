@@ -1,0 +1,11 @@
+<span class="text-lg font-extrabold font-body">Experience</span>
+<div class="bg-white px-10 py-6 w-full flex-grow  shadow-md rounded-xl mt-5 ">
+    <div *ngFor="let e of experience" class="font-bold font-body">
+        <div class="flex justify-between ">
+            <span>{{e.company}}&nbsp;</span>
+            <span>{{e.periode}}</span>
+        </div>
+        <span class="ms-4 text-xs font-normal">{{e.poste}} ({{e.contract}})</span>
+    </div>
+    
+</div>

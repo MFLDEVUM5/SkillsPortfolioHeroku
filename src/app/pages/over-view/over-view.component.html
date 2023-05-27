@@ -1,0 +1,5 @@
+<app-projects-over-view class="block mt-5" [isMobile]="isMobile"></app-projects-over-view>
+<div class="flex gap-4 flex-row mb-2" [ngClass]="isMobile?'flex-col gap-3':'items-stretch'">
+    <app-education class=" mt-6 w-full flex-1 flex flex-col"></app-education>
+    <app-experience class=" mt-6 w-full flex-1 flex flex-col" [ngClass]="isMobile?'mb-5':''"></app-experience>
+</div>

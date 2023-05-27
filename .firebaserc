@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "skillsportfolio-71a86": {
+      "hosting": {
+        "skillsPortfolio": [
+          "skillsportfolio-71a86"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "skillsportfolio-71a86"
+  }
+}

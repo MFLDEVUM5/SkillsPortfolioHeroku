@@ -1,0 +1,21 @@
+<span class="text-lg font-extrabold font-body">Projects Overview</span>
+<div class="flex justify-between  mt-5">
+  <owl-carousel-o [options]="customOptions"[ngClass]="isMobile?'w-full':'w-[95%]'" #owlCar>
+    <ng-template carouselSlide *ngFor="let project of projects" [width]="215" >
+      <div [routerLink]= "['/projectDetails', project.ID]"  class=" cursor-pointer max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white text-center w-48 h-28">
+        <div class="font-bold fa-body text-md my-1">{{project.name}}</div>
+        <img class="w-full  object-fit rounded-2xl" src="{{project.imageOverview}}">
+      </div>
+    </ng-template>  
+  </owl-carousel-o>
+  <div class="flex flex-col gap-2" *ngIf="!isMobile">
+    <div (click)="owlCar.next()" class=" shadow-lg bg-white rounded-xl w-10 h-10 flex items-center justify-center text-primary2 hover:bg-primary2 hover:text-white">
+      <mat-icon class="mat-18 ">keyboard_arrow_right</mat-icon>
+    </div>
+    <div (click)="owlCar.prev()" class=" shadow-lg bg-white rounded-xl w-10 h-10 flex items-center justify-center text-primary2 hover:bg-primary2 hover:text-white">
+      <mat-icon class="mat-18 ">keyboard_arrow_left</mat-icon>
+    </div>
+  </div>
+ 
+</div>
+

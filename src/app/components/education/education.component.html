@@ -1,0 +1,9 @@
+<span class="text-lg font-extrabold font-body">Education</span>
+<div class="bg-white px-10 py-6 w-full flex-grow shadow-md rounded-xl mt-5">
+    <div *ngFor="let e of education" class="font-bold font-body">
+        <div class="flex justify-between ">
+            <span>{{e.school}}</span><span>{{e.periode}}</span>
+        </div>
+        <span class="ms-4 text-xs font-normal">{{e.domaine}}</span>
+    </div>
+</div>

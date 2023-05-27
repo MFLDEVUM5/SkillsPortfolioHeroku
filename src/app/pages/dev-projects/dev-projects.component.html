@@ -1,0 +1,18 @@
+<span class="text-lg font-extrabold font-body block mb-3" [ngClass]="isMobile?'  mt-6':''">Dev Projects</span>
+<div class="grid " [ngClass]="isMobile?'grid-cols-1 gap-4':'grid-cols-4 gap-4 h-80'">
+    <div [routerLink]= "['/projectDetails', firstProject.ID]"  [ngClass]="isMobile?'h-36 ':'col-span-2 row-span-2  '" class=" cursor-pointer flex flex-col justify-end rounded-2xl shadow-lg   bg-cover bg-center" [style.background-image]="'url(\'' + firstProject.imageOverview + '\')'">
+        <div  class="w-full h-16 flex justify-between items-end px-7 pb-8 rounded-b-xl " [style.background-image]="'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 200%)'">
+            <span class="font-body  font-bold text-back text-xl">
+                {{firstProject.name}} <span class="text-xs underline">(see details)</span>
+            </span>
+        </div>
+     </div>
+     <div  *ngFor="let p of devProjects" [ngClass]="isMobile?'h-36 ':''" [routerLink]= "['/projectDetails', p.ID]" class="cursor-pointer col-span-1 row-span-1 flex flex-col justify-end  rounded-2xl  shadow-lg    bg-cover bg-center " [style.background-image]="'url(\'' + p.imageOverview + '\')'">
+        <div class="w-full h-16 flex justify-between items-end px-3 pb-4 rounded-b-xl" [style.background-image]="'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 200%)'" >
+            <span class="font-body font-bold text-white text-sm  ">
+                {{p.name}} <span class="text-xs underline">(see details)</span>
+            </span>
+        </div>
+    </div>
+   
+</div>
